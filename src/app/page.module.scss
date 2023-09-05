@@ -19,7 +19,7 @@
       color: #333;
       font-size: 40px;
       font-weight: 500;
-      text-shadow: 2px 2px #999;
+      text-shadow: 2px 2px #dbdbdb;
     }
 
     h3 {
@@ -27,7 +27,7 @@
       color: #666;
       font-size: 24px;
       font-weight: 500;
-      text-shadow: 2px 2px #999;
+      text-shadow: 2px 2px #dbdbdb;
     }
 
     .avatar {
@@ -58,5 +58,21 @@
     }
 
     animation: down 1s infinite alternate-reverse;
+  }
+}
+
+.home-other {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background: #fbfbfb;
+  user-select: none;
+  border-top: 2px solid #dbdbdb;
+
+  .single-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 57px);
   }
 }
