@@ -7,7 +7,7 @@ export default function Home() {
       <div className={styles['home']}>
         <div className={styles['info-block']}>
           <div className={styles['avatar']}>
-            <Image width={120} height={120} src='/Avatar.jpg' alt='' />
+            <Image priority={true} width={120} height={120} src='/yorikhu/avatar.jpg' alt='' />
           </div>
           <h2>胡永琪</h2>
           <h3>Yorik Hu</h3>

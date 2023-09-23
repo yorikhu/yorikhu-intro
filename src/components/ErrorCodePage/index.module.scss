@@ -1,0 +1,345 @@
+$m-01: #545454;
+
+$bg-01: #ffffff;
+$bg-02: #767676;
+$bg-03: #484848;
+
+$g-01: linear-gradient(90deg, #cccccc 0%, #888888 100%);
+
+$cubic: cubic-bezier(0.4, 0.35, 0, 1.53);
+$cubic2: cubic-bezier(0.18, 0.89, 0.32, 1.15);
+
+$circleShadow: inset 5px 20px 40px rgba($bg-02, 0.25),
+  inset 5px 0px 5px rgba($bg-03, 0.3), inset 5px 5px 20px rgba($bg-03, 0.25),
+  2px 2px 5px rgba(white, 0.2);
+
+.not-found {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: $bg-01;
+  user-select: none;
+
+  .wrapper {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      transition: all 0.4s ease;
+      justify-content: center;
+      align-items: center;
+
+      // Scene for the Parallax Effect
+      .scene {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+
+      .operation {
+        position: absolute;
+        width: 60%;
+        height: 40%;
+        min-width: 400px;
+        min-height: 500px;
+        margin: 40px 0;
+        animation: text 0.6s 1.8s ease backwards;
+
+        @keyframes text {
+          0% {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+        }
+
+        article {
+          display: flex;
+          position: absolute;
+          width: 400px;
+          bottom: 0;
+          left: 50%;
+          z-index: 4;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          transform: translateX(-50%);
+
+          p {
+            margin-bottom: 40px;
+            color: $m-01;
+            font-size: 24px;
+            letter-spacing: 0.6px;
+            text-shadow: 6px 6px 10px $bg-03;
+          }
+
+          a {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 15px 20px rgba($bg-02, 0.5);
+            z-index: 3;
+            color: $m-01;
+            background-color: white;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 12px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background: $m-01;
+              border-color: $m-01;
+              color: white;
+            }
+
+            &:active {
+              box-shadow: 0 10px 10px -10px rgba($bg-02, 0.5);
+              transform: translateY(2px);
+            }
+          }
+        }
+      }
+
+      // All elements' containers
+      .one,
+      .two,
+      .three,
+      .circle,
+      .p-error-code {
+        .content {
+          display: flex;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 600px;
+          height: 600px;
+          justify-content: center;
+          align-items: center;
+          transform: translate(-50%, -50%);
+          animation: content 0.8s cubic-bezier(1, 0.06, 0.25, 1) backwards;
+
+          @keyframes content {
+            0% {
+              width: 0;
+            }
+          }
+
+          // Pieces
+          .piece {
+            display: flex;
+            position: absolute;
+            width: 200px;
+            height: 80px;
+            border-radius: 80px;
+            z-index: 1;
+            animation: piece-left 8s cubic-bezier(1, 0.06, 0.25, 1) infinite
+              both;
+
+            @keyframes piece-left {
+              50% {
+                left: 80%;
+                width: 10%;
+              }
+            }
+
+            @keyframes piece-right {
+              50% {
+                right: 80%;
+                width: 10%;
+              }
+            }
+          }
+        }
+      }
+
+      // The Error Code
+      .p-error-code {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25vh);
+        font-size: 140px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        color: $m-01;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        animation: anime-error 0.6s cubic-bezier(0.3, 0.8, 1, 1.05) both;
+        animation-delay: 1.2s;
+
+        @keyframes anime-error {
+          0% {
+            opacity: 0;
+            transform: scale(10) skew(20deg, 20deg);
+          }
+        }
+
+        &:nth-of-type(2) {
+          color: $bg-02;
+          z-index: 1;
+          animation-delay: 1s;
+          filter: blur(10px);
+          opacity: 0.8;
+        }
+      }
+
+      .piece {
+        opacity: 0.4;
+      }
+
+      // Cloudy 1
+      .one {
+        .content {
+          @keyframes circle {
+            0% {
+              width: 0;
+              height: 0;
+            }
+          }
+          // Bigger Circle
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            transform: translate(-50%, -50%);
+            background-color: rgba($bg-02, 0.2);
+            border-radius: 100%;
+            box-shadow: $circleShadow;
+            animation: circle 0.8s cubic-bezier(1, 0.06, 0.25, 1) backwards;
+          }
+          // Smaller Circle
+          &::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: rgba($bg-02, 0.3);
+            border-radius: 100%;
+            box-shadow: $circleShadow;
+            animation: circle 0.8s 0.4s cubic-bezier(1, 0.06, 0.25, 1) backwards;
+          }
+
+          .piece {
+            background: $g-01;
+
+            &:nth-child(1) {
+              right: 15%;
+              top: 18%;
+              height: 20px;
+              width: 120px;
+              animation-delay: 0.5s;
+              animation-name: piece-right;
+            }
+
+            &:nth-child(2) {
+              left: 15%;
+              top: 45%;
+              width: 130px;
+              height: 30px;
+              animation-delay: 1s;
+              animation-name: piece-left;
+            }
+
+            &:nth-child(3) {
+              left: 10%;
+              top: 75%;
+              height: 22px;
+              width: 100px;
+              animation-delay: 1.5s;
+              animation-name: piece-left;
+            }
+          }
+        }
+      }
+
+      // Cloudy 2
+      .two {
+        .content {
+          .piece {
+            background: $g-01;
+
+            &:nth-child(1) {
+              left: 0%;
+              top: 25%;
+              height: 30px;
+              width: 140px;
+              animation-delay: 2s;
+              animation-name: piece-left;
+            }
+
+            &:nth-child(2) {
+              right: 15%;
+              top: 35%;
+              width: 180px;
+              height: 30px;
+              animation-delay: 2.5s;
+              animation-name: piece-right;
+            }
+
+            &:nth-child(3) {
+              top: 80%;
+              right: 10%;
+              width: 120px;
+              height: 20px;
+              animation-delay: 3s;
+              animation-name: piece-right;
+            }
+          }
+        }
+      }
+
+      // Cloudy 3
+      .three {
+        .content {
+          .piece {
+            background: $g-01;
+
+            &:nth-child(1) {
+              top: 35%;
+              left: 25%;
+              width: 100px;
+              height: 20px;
+              animation-name: piece-left;
+              animation-delay: 3.5s;
+            }
+
+            &:nth-child(2) {
+              top: 55%;
+              right: 10%;
+              width: 90px;
+              height: 30px;
+              animation-name: piece-right;
+              animation-delay: 4s;
+            }
+
+            &:nth-child(3) {
+              top: 68%;
+              left: 40%;
+              width: 90px;
+              height: 24px;
+              animation-name: piece-left;
+              animation-delay: 4.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
