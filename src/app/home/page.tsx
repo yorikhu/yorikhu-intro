@@ -9,7 +9,10 @@ export default function Home() {
           <div className={styles['avatar']}>
             <Image priority={true} width={120} height={120} src='/yorikhu/avatar.jpg' alt='' />
           </div>
-          <h2>胡永琪</h2>
+          <div className={styles['name-wrapper']}>
+            <h2 className={styles['nick']}>卷卷</h2>
+            <h2 className={styles['real']}>胡永琪</h2>
+          </div>
           <h3>Yorik Hu</h3>
         </div>
         <div className={styles['drop-down-tips']}>
