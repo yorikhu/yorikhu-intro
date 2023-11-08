@@ -7,7 +7,13 @@ export default function Home() {
       <div className={styles['home']}>
         <div className={styles['info-block']}>
           <div className={styles['avatar']}>
-            <Image priority={true} width={120} height={120} src='/yorikhu/avatar.jpg' alt='' />
+            <Image
+              priority={true}
+              width={120}
+              height={120}
+              src='/yorikhu/avatar.jpg'
+              alt=''
+            />
           </div>
           <div className={styles['name-wrapper']}>
             <h2 className={styles['nick']}>卷卷</h2>
