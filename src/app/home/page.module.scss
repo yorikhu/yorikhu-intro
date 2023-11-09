@@ -30,24 +30,11 @@
         width: 100%;
         background: #fbfbfb;
         text-align: center;
-        animation: hidden 0.4s ease-in-out;
         transition: all 0.4s;
       }
 
       .real {
         text-align: center;
-      }
-
-      @keyframes hidden {
-        from {
-          opacity: 0;
-          transform: translateX(80%);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
       }
     }
 
