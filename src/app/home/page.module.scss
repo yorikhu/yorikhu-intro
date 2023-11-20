@@ -2,6 +2,8 @@
   display: flex;
   position: relative;
   height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -87,16 +89,31 @@
 
 .home-other {
   display: flex;
+  padding: 12vh 48px 24vh;
   position: relative;
   flex-direction: column;
-  background: #fbfbfb;
   user-select: none;
   border-top: 2px solid #dbdbdb;
+
+  h2 {
+    font-size: 40px;
+    padding: 0 48px 4vh;
+    text-align: center;
+  }
 
   .single-block {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 57px);
+
+    &.menu-block {
+      gap: 24px;
+      flex-wrap: wrap;
+
+      .wrap {
+        display: flex;
+        gap: 24px;
+      }
+    }
   }
 }
