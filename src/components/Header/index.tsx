@@ -5,7 +5,7 @@ export default function Header() {
     <div className={styles["header"]}>
       <div className={styles["left"]}>
         <div className={styles["intro-logo"]}>
-          <span>Yorikhu</span>
+          <span>Yorik Hu</span>
         </div>
       </div>
     </div>

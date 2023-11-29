@@ -1,9 +1,12 @@
 .menu-card {
+  position: relative;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 360px;
   width: 280px;
+  padding: 48px 24px 24px;
   border-radius: 24px;
   box-shadow: 2px 4px 10px #d8d8d8;
   cursor: pointer;
@@ -13,7 +16,59 @@
     transform: scale(99%);
   }
 
+  @keyframes shake {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(20deg);
+    }
+    60% {
+      transform: rotate(-20deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  @keyframes arrowMove {
+    0% {
+      transform: rotate(90deg) translateY(0);
+    }
+    50% {
+      transform: rotate(90deg) translateY(-6px);
+    }
+    100% {
+      transform: rotate(90deg) translateY(0);
+    }
+  }
+
+  &:hover {
+    .custom-icon,
+    h3 {
+      animation: shake 0.4s ease-in-out;
+    }
+
+    .arrow {
+      animation: arrowMove 0.8s ease-in-out infinite;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    transform: rotate(90deg);
+  }
+
+  p {
+    text-align: center;
+    color: #999;
+    font-weight: bold;
+  }
+
   h3 {
+    box-sizing: border-box;
     font-size: 20px;
     letter-spacing: 0.2em;
     color: #666;

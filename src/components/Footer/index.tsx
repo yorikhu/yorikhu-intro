@@ -10,7 +10,7 @@ export default function Footer() {
         浙公网安备 {recordcode}号
       </a>
       <a href='https://beian.miit.gov.cn/'>浙ICP备2022024831号</a>
-      <p>Copyright ©2023 Yorikhu</p>
+      <p>Copyright ©2023 卷卷 Yorik</p>
     </div>
   );
 }
