@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.scss";
 import MenuCard from "./components/MenuCard";
+import { useRouter } from "next/navigation";
 import classnames from "classnames";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <>
       <div className={styles["home"]}>
@@ -39,12 +44,20 @@ export default function Home() {
           className={classnames(styles["single-block"], styles["menu-block"])}
         >
           <div className={styles["wrap"]}>
-            <MenuCard title="个人简介" icon="/christmas-collection/bear.svg">
+            <MenuCard
+              title="个人简介"
+              icon="/christmas-collection/bear.svg"
+              onClick={() => router.push("/person")}
+            >
               <p>掀开这一页，</p>
               <p>或许，</p>
               <p>我们的故事就开始了。</p>
             </MenuCard>
-            <MenuCard icon="/christmas-collection/socks.svg" title="职业生涯">
+            <MenuCard
+              icon="/christmas-collection/socks.svg"
+              title="职业生涯"
+              onClick={() => router.push("/career")}
+            >
               <p>每一次转身，</p>
               <p>都是新的一页，</p>
               <p>上面谱写的是一首首诗篇。</p>
@@ -54,12 +67,17 @@ export default function Home() {
             <MenuCard
               icon="/christmas-collection/ice-cream.svg"
               title="产品板块"
+              onClick={() => router.push("/products")}
             >
               <p>冰冷的字符，</p>
               <p>跃动在纸上，</p>
               <p>恰似一曲悠扬的交响。</p>
             </MenuCard>
-            <MenuCard icon="/christmas-collection/home.svg" title="社区互动">
+            <MenuCard
+              icon="/christmas-collection/home.svg"
+              title="社区互动"
+              onClick={() => router.push("/community")}
+            >
               <p>再回首，</p>
               <p>莫在此处驻足，</p>
               <p>前面还有漫漫长路。</p>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./index.module.scss";
 
 export default function Header() {
@@ -5,7 +6,7 @@ export default function Header() {
     <div className={styles["header"]}>
       <div className={styles["left"]}>
         <div className={styles["intro-logo"]}>
-          <span>Yorik Hu</span>
+          <Link href="/home">Yorik Hu</Link>
         </div>
       </div>
     </div>
