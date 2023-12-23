@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 
 export default function Footer() {
-  const recordcode = '33010202002367';
+  const recordcode = '33010xxxxxxxxx';
   return (
     <div className={styles['footer']}>
       <a
@@ -9,7 +9,7 @@ export default function Footer() {
       >
         浙公网安备 {recordcode}号
       </a>
-      <a href='https://beian.miit.gov.cn/'>浙ICP备2022024831号</a>
+      <a href='https://beian.miit.gov.cn/'>浙ICP备2023xxxxxx号</a>
       <p>Copyright ©2023 卷卷 Yorik</p>
     </div>
   );
