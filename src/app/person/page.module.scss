@@ -1,0 +1,64 @@
+@import "@/app/common.scss";
+
+.person-page {
+  background-color: transparent;
+
+  .intro-part {
+    display: flex;
+    min-height: 240px;
+    justify-content: center;
+
+    .avatar-area {
+      padding: 48px;
+    }
+
+    .brief-desc {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 48px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 300px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: #dbdbdb;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .main-desc {
+    display: flex;
+    padding: 12vh 48px 24vh;
+    position: relative;
+    flex-direction: column;
+    user-select: none;
+    border-top: 2px solid #dbdbdb;
+
+    h2 {
+      font-size: 40px;
+      padding: 0 48px 4vh;
+      text-align: center;
+    }
+
+    .desc-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      p {
+        font-size: 24px;
+        text-indent: 2em;
+      }
+    }
+  }
+}
