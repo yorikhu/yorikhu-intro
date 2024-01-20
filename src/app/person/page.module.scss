@@ -2,6 +2,8 @@
 
 .person-page {
   background-color: transparent;
+  max-width: 1200px;
+  margin: auto;
 
   .intro-part {
     display: flex;
@@ -19,17 +21,6 @@
       justify-content: center;
       padding-left: 48px;
 
-      &::before {
-        position: absolute;
-        content: "";
-        width: 2px;
-        height: 300px;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        background: #dbdbdb;
-      }
-
       p {
         font-size: 18px;
       }
@@ -43,6 +34,7 @@
     flex-direction: column;
     user-select: none;
     border-top: 2px solid #dbdbdb;
+    align-items: center;
 
     h2 {
       font-size: 40px;
@@ -53,12 +45,22 @@
     .desc-content {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      max-width: 1200px;
+
       p {
+        width: 100%;
+        margin-bottom: 0;
         font-size: 24px;
         text-indent: 2em;
+        line-height: 42px;
       }
+    }
+
+    .content-footer {
+      display: flex;
+      flex-direction: row-reverse;
+      height: 110px;
+      width: 100%;
+      padding-top: 24px;
     }
   }
 }
