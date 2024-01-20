@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import classnames from "classnames";
 
 export default function Home() {
+  /** Next 在 dev 时路由跳转较慢是由于页面没有完全编译 */
   const router = useRouter();
 
   return (
