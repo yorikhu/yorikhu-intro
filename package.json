@@ -22,5 +22,6 @@
   },
   "devDependencies": {
     "sass": "^1.64.2"
-  }
+  },
+  "repository": "git@github.com:yorikhu/yorikhu-intro.git"
 }
