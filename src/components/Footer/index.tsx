@@ -1,5 +1,6 @@
 import styles from './index.module.scss';
 
+/** 页脚备案信息 */
 export default function Footer() {
   const recordcode = '33010xxxxxxxxx';
   return (

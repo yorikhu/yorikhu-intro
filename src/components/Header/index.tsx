@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./index.module.scss";
 
+/** 页头 */
 export default function Header() {
   return (
     <div className={styles["header"]}>

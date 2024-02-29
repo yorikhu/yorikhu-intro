@@ -6,6 +6,7 @@ type Props = {
   children: ReactElement;
 };
 
+/** 加载中 */
 const Loading: React.FC<Props> = (props) => {
   const { isLoading, children } = props;
 

@@ -7,6 +7,7 @@ type Props = {
   homeUrl: string;
 };
 
+/** 错误展示 */
 const ErrorCodePage: React.FC<Props> = (props) => {
   const { errorCode, errorText, homeUrl } = props;
   return (
