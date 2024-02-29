@@ -1,0 +1,14 @@
+.standard-description {
+  display: flex;
+  padding: 12vh 48px 24vh;
+  position: relative;
+  flex-direction: column;
+  user-select: none;
+
+  h2 {
+    font-size: 40px;
+    margin: 0;
+    padding: 0 48px 6vh;
+    text-align: center;
+  }
+}

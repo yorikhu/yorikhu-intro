@@ -1,5 +1,3 @@
-@import "@/app/common.scss";
-
 .header {
   position: sticky;
   top: 0;
@@ -7,7 +5,6 @@
   overflow: hidden;
   justify-content: space-between;
   align-items: center;
-  height: $headerHeight;
   padding: 0 24px;
   border-bottom: 1px solid rgba(#000, 0.06);
   z-index: 99;
@@ -16,7 +13,6 @@
   .left {
     .intro-logo {
       display: flex;
-      height: $headerHeight;
       align-items: center;
       a {
         color: rgba(#000000, 0.85);

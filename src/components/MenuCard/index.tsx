@@ -2,6 +2,7 @@ import { Props } from "./type";
 import Image from "next/image";
 import styles from "./index.module.scss";
 
+/** 菜单卡片 */
 export default function MenuCard({ title, icon, onClick, children }: Props) {
   return (
     <div onClick={onClick} className={styles["menu-card"]}>

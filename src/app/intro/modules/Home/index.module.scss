@@ -1,9 +1,6 @@
-@import "@/app/common.scss";
-
 .home {
   display: flex;
   position: relative;
-  height: calc(100vh - $headerHeight);
   min-height: 550px;
   padding: 24px;
   box-sizing: border-box;
@@ -87,36 +84,5 @@
     }
 
     animation: down 1s infinite alternate-reverse;
-  }
-}
-
-.home-other {
-  display: flex;
-  padding: 12vh 48px 24vh;
-  position: relative;
-  flex-direction: column;
-  user-select: none;
-  border-top: 2px solid #dbdbdb;
-
-  h2 {
-    font-size: 40px;
-    padding: 0 48px 4vh;
-    text-align: center;
-  }
-
-  .single-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &.menu-block {
-      gap: 24px;
-      flex-wrap: wrap;
-
-      .wrap {
-        display: flex;
-        gap: 24px;
-      }
-    }
   }
 }

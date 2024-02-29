@@ -1,22 +1,23 @@
-"use client";
+'use client';
 
-import styles from "./page.module.scss";
-import Image from "next/image";
+import StandardDescription from '@/components/StandardDescription';
+import styles from './page.module.scss';
+import Image from 'next/image';
 
 export default function Person() {
   return (
-    <div className={styles["person-page"]}>
-      <div className={styles["intro-part"]}>
-        <div className={styles["avatar-area"]}>
+    <div className={styles['person-page']}>
+      <div className={styles['intro-part']}>
+        <div className={styles['avatar-area']}>
           <Image
             priority={true}
             width={400}
             height={400}
-            src="/yorikhu/ai-avatar.png"
-            alt=""
+            src='/yorikhu/ai-avatar.png'
+            alt=''
           />
         </div>
-        <div className={styles["brief-desc"]}>
+        <div className={styles['brief-desc']}>
           <p>花名：卷卷</p>
           <p>姓名：胡永琪</p>
           <p>英文名：Yorik Hu</p>
@@ -25,9 +26,8 @@ export default function Person() {
           <p>技术：JavaScript、HTML + CSS、React、Vue、Node</p>
         </div>
       </div>
-      <div className={styles["main-desc"]}>
-        <h2>写在前面</h2>
-        <div className={styles["desc-content"]}>
+      <StandardDescription title='写在前面'>
+        <div className={styles['desc-content']}>
           <p>
             我是一枚 99
             年的在职前端开发，和大多数程序员一样，将写代码的时光视为一种安静而美好的享受。
@@ -41,16 +41,16 @@ export default function Person() {
             我觉得自己也是老大不小的人了，也应该好好想想自己能否对自己做的事负责任，也许我应该好好坚持的做一些事，好好认真的做一些事，哪怕只是想得到来自未来自己的肯定。
           </p>
         </div>
-        <div className={styles["content-footer"]}>
+        <div className={styles['content-footer']}>
           <Image
             priority={true}
             width={204}
             height={110}
-            src="/yorikhu/signature.png"
-            alt=""
+            src='/yorikhu/signature.png'
+            alt=''
           />
         </div>
-      </div>
+      </StandardDescription>
     </div>
   );
 }

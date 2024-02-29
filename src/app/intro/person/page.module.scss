@@ -1,0 +1,52 @@
+.person-page {
+  background-color: transparent;
+  max-width: 1200px;
+  margin: auto;
+
+  .intro-part {
+    display: flex;
+    min-height: 240px;
+    justify-content: center;
+
+    .avatar-area {
+      padding: 48px;
+    }
+
+    .brief-desc {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 48px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .desc-content {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      width: 100%;
+      margin-bottom: 0;
+      font-size: 24px;
+      text-indent: 2em;
+      line-height: 42px;
+
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .content-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 110px;
+    width: 100%;
+    padding-top: 24px;
+  }
+}
